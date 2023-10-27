@@ -9,6 +9,9 @@
     <title>Growth App</title>
 </head>
 <body>
+
+    <!-- Navbar -->
+
     <nav class="navbar">
         <div class="containar">
             <div class="logo">
@@ -34,26 +37,58 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <!-- Hero -->
-    <section class="hero">
-        <div class="containar">
-            <div class="hero-content">
-                <h1 class="text-xxl" class="hero-heading">A powerful solution to grow your startup. Fast!</h1>
-                <p class="hero-text">
-                    Organise, collaborate, and track progress seamlessly with our one-stop-shop startup growth tool.
-                </p>
-                <div class="hero-buttons">
-                    <a class="btn btn-primary" href="#">Get Started</a>
-                    <a class="btn" href="#">
-                        <i class="fas fas fas fa-laptop"></i> Book a demo
-                    </a>
-                </div>
+
+            <!-- Hamburger Buttons -->
+
+            <button id="hamburger-button" class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="mobile-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="#">
+                            <i class="fas fa-user"></i> Log In
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+        <div class="containar">
+          <div class="hero-content">
+            <h1 class="hero-heading text-xxl">
+              A powerful solution to grow your startup. Fast!
+            </h1>
+            <p class="hero-text">
+              Organize, collaborate, and track progress seamlessly with our
+              one-stop-shop startup growth tool.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Get Started</a>
+              <a href="#" class="btn">
+                <i class="fas fa-laptop"></i> Book a Demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <!-- Video Section -->
+
     <section class="video bg-black">
         <div class="containar-sm">
             <h2 class="video-heading text-xl text-center">
@@ -68,7 +103,9 @@
             </div>
         </div>
     </section>
+
     <!-- Testimonials -->
+
     <section class="testimonials bg-dark">
         <div class="containar">
             <h3 class="testimonials-heading text-xl">
@@ -111,7 +148,9 @@
             </div>
         </div>
     </section>
+
     <!-- Pricing -->
+
     <section class="pricing">
         <div class="containar-sm">
             <h3 class="pricing-heading text-xl text-center">
@@ -160,7 +199,7 @@
                     </div>
                 </div>
                 <!-- Pricing Card 2 -->
-                <div class="card bg-black">
+                <div class="card bg-dark">
                     <div class="pricing-card-header">
                         <h4 class="pricing-heading text-xl">
                             Premium
@@ -210,7 +249,9 @@
             </p>
         </div>
     </section>
+
     <!-- FAQ -->
+
     <section class="faq bg-light">
         <div class="containar-sm">
             <h3 class="text-xl text-center">
@@ -303,6 +344,73 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+
+    <footer class="footer bg-black">
+        <div class="containar">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html">
+                    <img src="./images/logo-white.png" alt="Logo">
+                </a>
+                <div class="card bg-light">
+                    <h4>Subscribe to newsletter</h4>
+                    <p class="text-sm">Subscribe now to receive  tips on how to take your business to the next level.</p>
+                    <form> 
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="footer-content">
+                    <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Process</a>
+                        </li>
+                        <li>
+                            <a href="#">Join our team</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>
+                            <a href="#">News</a>
+                        </li>
+                        <li>
+                            <a href="#">Research</a>
+                        </li>
+                        <li>
+                            <a href="#">Recent Projects</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <a href="#">hello@growthapp.com</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+
+
     <script src="./js/main.js"></script>
 </body>
-</html>
+</html>   

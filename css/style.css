@@ -14,6 +14,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background: #fff;
+    overflow-x: hidden;
 }
 
 a {
@@ -37,7 +38,7 @@ img {
     padding: 20px;
 }
 
- .navbar .container{
+ .navbar .containar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,8 +75,8 @@ img {
     margin-bottom: 50px;
 }
 
-.hero .container{
-    background: url(../images/hero-bg.png) no-repeat;
+.hero .containar{
+    background: url(/images/hero-bg.png) no-repeat;
     background-size: contain;
     background-position: center bottom;
     height: 550px;
@@ -245,6 +246,57 @@ img {
     color: #fff;
 }
 
+/* Footer */
+
+.footer{
+    padding: 40px 0;
+}
+
+.footer h4{
+    margin-bottom: 10px;
+}
+
+.footer ul li{
+    line-height: 2.5;
+}
+
+.footer a{
+    color: #ccc;
+    margin-right: 10px;
+}
+
+.footer i{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer .footer-grid{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .card{
+    margin: 20px 30px 30px 0 ;
+}
+
+.footer input[type='email']{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.footer .footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: start;
+}
+
 
 /* Uitility Container */
 
@@ -337,31 +389,161 @@ img {
     text-align: center;
 }
 
+/* Card */
+
+.card{
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
 /* Background */
 
 .bg-primary{
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: #fff;
 }
 
 .bg-light{
-    background: var(--light-color);
+    background-color: var(--light-color);
     color: #333;
 }
 
 .bg-dark{
-    background: var(--drak-color);
+    background-color: var(--drak-color);
     color: #fff;
 }
 
 .bg-black{
-    background: #000;
+    background-color: #000;
     color: #fff;
 }
 
-/* Card */
+/* Hamburger Button */
 
-.card{
-    padding: 20px;
-    border-radius: 10px;
+.hamburger-button{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line{
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+}
+
+/* Mobile Menu */
+
+
+
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0,0.2);
+    transition: right 0.3 ease-in-out;
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+.mobile-menu ul{
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li{
+    padding: 10px 0;
+}
+
+.mobile-menu ul li a{
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+
+/* Media Queries  */
+
+
+@media (max-width: 980px) {
+    .text-xxl{
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media (max-width: 670px) {
+    .navbar .main-menu{
+        display: none;
+    }
+
+    .navbar .hamburger-button{
+        display: block;
+    }
+
+    .hero .containar{
+        background: url(../images/hero-bg-mobile.png) no-repeat;
+        background-size: 350px 400px;
+        background-position: bottom;
+        height: 770px;
+    }
+    
+    .hero .hero-content,.hero .hero-text{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .hero .hero-buttons .btn{
+        width: 100%;
+        display: block;
+    }
+
+    .testimonials .testimonials-heading{
+        max-width: 100%;
+        text-align: center;
+    }
+    .testimonials .testimonials-grid , .pricing .pricing-grid, .footer .footer-grid, .footer .footer-content{
+        grid-template-columns: 1fr;
+    }
+
+    .footer .card{
+        margin-right: 0;
+    }
+
+    .footer .footer-grid > div{
+        text-align: center;
+    }
+
+    /* Text */
+
+    .text-xl{
+        font-size: 1.9rem;
+    }
+    .text-lg{
+        font-size: 1.5rem;
+    }
+    .text-md{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+     /* Text */
+
+     .text-xxl{
+        font-size: 2rem;
+    }
 }
